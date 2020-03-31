@@ -1,11 +1,11 @@
 *** Settings ***
 Resource  ../resources/pageUsage.robot
 *** Variables ***
-${howManyTimes}  13
-
+${howManyTimes}  7
+${whichGod}  Jesus
 *** Test Cases ***
-Search For Jesus
+Search For God
     Open Browser  ${WIKIPEDIA_URL}  chrome
-    Search Jesus  ${howManyTimes}
+    Search a God  ${howManyTimes}
     Close All Browsers
 
