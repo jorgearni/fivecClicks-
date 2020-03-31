@@ -1,0 +1,26 @@
+FROM python:3
+
+RUN apt-get update && apt-get install -y \
+	software-properties-common \
+	xvfb \
+	firefox-esr
+
+ENV GECKODRIVER_VERSION 0.26.0
+
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v${GECKODRIVER_VERSION}/geckodriver-v${GECKODRIVER_VERSION}-linux64.tar.gz -q -O /tmp/geckodriver.tar.gz \
+	&& tar -zxf /tmp/geckodriver.tar.gz -C /opt/ \
+	&& rm /tmp/geckodriver.tar.gz \
+	&& mv /opt/geckodriver /opt/geckodriver-${GECKODRIVER_VERSION} \
+	&& chmod 755 /opt/geckodriver-${GECKODRIVER_VERSION} \
+	&& ln -fs /opt/geckodriver-${GECKODRIVER_VERSION} /usr/bin/geckodriver \
+	&& ln -fs /opt/geckodriver-${GECKODRIVER_VERSION} /usr/bin/wires
+	
+WORKDIR /home/robot
+
+COPY requirements.txt /
+
+RUN python -m pip install --upgrade pip && pip install -r /requirements.txt
+
+ENV DISPLAY=:20
+
+CMD /bin/bash setup_run_test.sh
