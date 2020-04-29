@@ -6,7 +6,7 @@ Library           Collections
 *** Variables ***
 ${WIKIPEDIA_URL}  https://en.wikipedia.org
 ${RANDOM_ARTICLE_HREF}  /wiki/Special:Random
-@{WORDS}  Christ_  Jesus  Nazareth  Church  Galilean  Religion  Religious  Apostles  Christianity  God  Bible  Biblical  Messianic  Crucified  Testament  Catholic  Holy  Incarnation  Nazareth  Jewish
+@{WORDS}  Jesus  Christ_  Nazareth  Church  Galilean  Religion  Religious  Apostles  Christianity  God  Bible  Biblical  Messianic  Crucified  Testament  Catholic  Holy  Incarnation  Nazareth  Jewish
 ...  Messiah  Gospel  Baptize  Baptism  Rabbi  Virgin  Miracle  Crucifixion  Sacrament  Ascended  Crusade  Heaven  Episcopal  Ritual  Christian  Easter  Islam  Prophet  Quran  Judaism  Jew  Hebrew  Moses  Islamic  Yahweh
 ...  Sacred  Christmas  Prophecies  Blessed  Jehova  Priesthood  Saint  Saints  Salvation  Preached  Preacher  Preach  Vicker  Ministry  Resurrection  Epistle  Common_Era  Gregorian  Priest  Yehoshua  Koine
 ...  Transfiguration  Temple  Bethlehem  Mosque  Spirit  Divine  Supernatural  Judah  Roma  Satan  Anno_Domini  Muslim  Bishop  Prophecy  Jerusalem  Exodus  Evangelist  Adventist  Parables  Sermon  Apocalyptic  Prodigal  Exorcism
