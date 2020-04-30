@@ -33,7 +33,7 @@ exports.findAll = (req, res) => {
   });
 };
 
-// Find a single Word with a wordId
+
 exports.findOne = (req, res) => {
   Word.findById(req.params.idword, (err, data) => {
     if (err) {
